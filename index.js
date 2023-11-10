@@ -53,7 +53,6 @@ app.post("/submit" , async (req,res) => {
         const timezone = await axios.get(`http://api.geonames.org/timezoneJSON?formatted=true&username=${GeoNames_Username}&lat=${latitude}&lng=${longitude}`);
         
         // To get all the information from the above api => console.log(timezone.data);
-
         
         // 4. moment-timezone - It is an npm library which gives the time based on the timezone [ moment.tz( {timezone} ); ]. We are taking the timezone from the 3rd API call and passsing it here.
 
