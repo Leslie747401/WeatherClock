@@ -22,7 +22,7 @@
     </form>
        
     <!-- && locals.precipitation && locals.wind_speed -->
-    <% if (locals.temperature && locals.humidity && locals.city && locals.country && locals.time) { %>
+    <% if (locals.temperature && locals.humidity && locals.city && locals.country && locals.time && locals.precipitation === 0 && locals.wind_speed) { %>
 
         <div class="weather-container">
 
@@ -71,7 +71,7 @@
 
             </div>
 
-            <!-- <div class="weather-info-line">
+            <div class="weather-info-line">
 
                 <div class="weather-info">
                     
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 
-            </div> -->
+            </div>
 
         </div>
 
