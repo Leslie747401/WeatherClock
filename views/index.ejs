@@ -21,8 +21,8 @@
         <!-- <button class="search-icon" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
     </form>
        
-
-    <% if (locals.temperature && locals.humidity && locals.wind_speed && locals.city && locals.country && locals.time && locals.precipitation) { %>
+    <!-- && locals.precipitation && locals.wind_speed -->
+    <% if (locals.temperature && locals.humidity && locals.city && locals.country && locals.time) { %>
 
         <div class="weather-container">
 
@@ -71,7 +71,7 @@
 
             </div>
 
-            <div class="weather-info-line">
+            <!-- <div class="weather-info-line">
 
                 <div class="weather-info">
                     
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 
-            </div>
+            </div> -->
 
         </div>
 
