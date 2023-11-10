@@ -44,7 +44,6 @@ app.post("/submit" , async (req,res) => {
         const geolocation = await axios.get(`http://api.geonames.org/searchJSON?username=${GeoNames_Username}&q=` + location);
 
         // To get all the information from the above api => console.log(geolocation.data.geonames[0]); we have used geonames[0] since there could be many results. Considering, the first result is the most accurate.
-        console.log(geolocation.data.geonames[0]);
 
         // 3. GeoNames API - It takes the latitude and longitude of the city as input. We are taking the latitude and longitude from the 2nd API call and passing it here as input. 
 
