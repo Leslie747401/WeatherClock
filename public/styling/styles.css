@@ -1,0 +1,192 @@
+/* #D5DCF9 (light purple) */
+
+*{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+body{
+    background-color: whitesmoke;     
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar{
+    background-color: #b2c1fe;      
+    width: 450px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 40px;
+}
+
+.location-icon{
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.searchbar input{
+    background-color: #b2c1fe;
+    width: 250px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+} 
+
+::placeholder{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.searchbar input:focus{
+    outline: none;
+}
+
+.search-icon{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 35px;
+    border-radius: 20px;
+    gap: 30px;
+}
+
+.location-and-time{
+    width: 420px;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.city-and-country{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.city{
+    color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 30px;
+    margin: 0;
+}
+
+.country{
+    color: grey;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+}
+
+.time p{
+    color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 35px;
+    margin: 0;
+}
+
+.line{
+    border: 1px solid rgb(46, 45, 45);
+}
+
+.weather-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-info{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+img{
+    border-radius: 50%;
+    background-color: rgb(67, 67, 67);
+    padding: 10px;
+}
+
+.name-and-value{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.heading{
+    color: grey;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+}
+
+.number{
+    color: white;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+}
+
+.weather-info-line{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:500px) {
+    .searchbar{
+        width: 300px;
+        margin-top: 30px;
+    }
+
+    .location-and-time{
+        width: 270px;
+    }
+
+    .weather-info-line{
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .time p{
+        font-size: 24px;
+    }
+
+    .city{
+        font-size: 24px;
+    }
+
+    .weather-container{
+        gap : 0px;
+        padding-bottom: 20px;
+    }
+
+    .line{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border: 1px solid rgb(46, 45, 45);
+    }
+}

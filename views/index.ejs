@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styling/styles.css">
+    <script src="https://kit.fontawesome.com/3e854bfc81.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">  
+</head>
+<body>
+    <!-- "Enter &nbsp;City..." -->
+    <form class="searchbar" action="/submit" method="post">
+        <div class="location-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <input type="text" placeholder="Enter &nbsp;your &nbsp;location..." name="location" autocomplete="off" required>
+        <!-- <button class="search-icon" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+    </form>
+       
+
+    <% if (locals.temperature && locals.humidity && locals.wind_speed && locals.city && locals.country && locals.time && locals.precipitation) { %>
+
+        <div class="weather-container">
+
+            <div class="top">
+
+                <div class="location-and-time">
+
+                    <div class="city-and-country">
+                        <p class="city"><%= city %></p>
+                        <p class="country"><%= country %></p>
+                    </div>
+            
+                    <div class="time">
+                        <p><%= time %></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="line"></div>
+
+            <div class="weather-info-line">
+
+                <div class="weather-info">
+                    
+                    <div>
+                        <img width="32" height="32" src="/images/icons8-temperature-80.png" alt="">
+                    </div>
+                    <div class="name-and-value">
+                        <p class="heading">Temperature</p>
+                        <p class="number"><%= temperature %> Degrees</p>
+                    </div>
+                </div>
+                    
+                <div class="weather-info">
+                    
+                    <div>
+                        <img width="32" height="32" src="/images/icons8-humidity-96.png" alt="">
+                    </div>
+                    <div class="name-and-value">
+                        <p class="heading">Humidity</p>
+                        <p class="number"><%= humidity %> %</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="weather-info-line">
+
+                <div class="weather-info">
+                    
+                    <div>
+                        <img width="32" height="32" src="/images/icons8-rain-cloud-100.png" alt="">
+                    </div>
+                    <div class="name-and-value">
+                        <p class="heading">Precipitation</p>
+                        <p class="number"><%= precipitation %> %</p>
+                    </div>
+                </div>
+                    
+                <div class="weather-info">
+                    
+                    <div>
+                        <img width="32" height="32" src="/images/icons8-wind-100.png" alt="">
+                    </div>
+                    <div class="name-and-value">
+                        <p class="heading">Windflow</p>
+                        <p class="number"><%= wind_speed %> Km/hr</p>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <% } %>
+
+</body>
+</html>
